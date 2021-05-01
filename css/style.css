@@ -73,7 +73,7 @@ footer {
     margin-bottom: 400px;  
 }
 .view {
-    background: url(/img/femili2.jpg);
+    background: url(..img/femili2.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -181,7 +181,7 @@ footer {
 }
 .team-imge::before {
     content: '';
-    background-image: url(/img/femili2.jpg);
+    background-image: url(..img/femili2.jpg);
     background-size: 100px 100px;
     box-shadow: 1px 1px 5px #000;
     display: block;
