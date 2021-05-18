@@ -4,80 +4,84 @@
     padding: 0;
     box-sizing: border-box;
 }
-.wrapper {
-    width: 100%;
-    overflow: hidden;
-}
-.header
-.main
-/* .teem, */
+header,
+.main,
 footer {
     max-width: 100%;
-    width: 1500px;
-    margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
+    width: 1200px; 
+    margin: 0 auto; 
+    overflow: hidden;
+    width: 100%;
 }
 /* header */
-.rbk {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding-top: 60px;
-    position: absolute;    
-    margin: 0 auto;
+header {
+    padding-left: 65px;
+    padding-right: 65px;
 }
- @media (max-width: 1024px) {
-    .logo {
-        margin-left: 65px;
-}
-    .menu{
-        margin-right: 65px;
-    }
-}
-@media (max-width: 425px) {
-    .menu input {
-        /* order: 1; */
-        display: flex;
-        justify-content: center; 
-         }
-    .logo {
-        /* order: 2; */
-        text-align: center;
-        margin-top: 155px;
-    }
-}
-@media (max-width: 375px) {
-    .view {
-        margin-left: 25px;
-        margin-right: 25px;
-    }
-}
-.menu input { 
-    background: transparent;
-}
-.header .special {
-    outline: none;
-    border: none;
-    margin-right: 30px;
-}
- .special1 {
-    border: 2px solid #333;
-    height: 40px;
-    width: 115px;
-    border-radius: 20px;
-    text-align: center;
-} 
+.header,
 .view {
-    text-align: center;
-    margin-bottom: 400px;  
-}
-.view {
-    background: url(../img/femili2.jpg);
-    height: 100vh;
+    background-image: url(../img/femili2.jpg);
+    /* height: 100vh; */                                    /*????*/                                               
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; 
+    color: #fff;
+}   
+.rbk {
+    display: flex;
+    justify-content: space-between; 
+    text-align: center;
+    padding-top: 60px;
+}
+.menu input {
+    background: transparent;
+    color: #fff;
+}
+.logo {
+    text-transform: uppercase;
+}
+.special {
+    outline: none;
+    border: none; 
+    margin-right: 30px;
+}
+.special1 {
+    border: 2px solid;
+    border-color: #fff;
+    height: 40px;
+    width: 75px;
+    border-radius: 20px;
+    text-align: center;
+} 
+@media (max-width: 425px) {
+    .rbk  {
+        justify-content: center;
+        align-items: center;  
+        display: flex; 
+        flex-direction: column;
+    }
+    .menu {
+        order: 1;
+        display: flex;
+    }
+    .menu input {
+        display: flex;
+        justify-content: center; 
+    }
+    .logo {
+        order: 2;
+        margin-top: 155px;
+    }
+    header {
+        padding: 0;
+    }
+}
+/* view */
+.view {
+    text-align: center;
+    margin-bottom: 95px;  
 }
 .view h2 {
     padding-top: 120px;
@@ -104,6 +108,7 @@ footer {
     border-radius: 20px 20px 20px 20px;
     border: none;
     font-size: 14px;
+    margin-bottom: 315px;
 }
 @media (max-width: 320px) {
     .view input {
@@ -187,12 +192,22 @@ footer {
     display: block;
     border: 2px solid rgb(102, 62, 9);
     border-radius: 50%;
-    right: 35px;
+    right: 16%;
     bottom: 0;
     position: absolute;
     width: 40px;
     height: 40px;
 } 
+@media (max-width: 375px) {
+    .team-imge::before {
+        right: 10%;
+    }
+}
+@media (max-width: 320px) {
+    .team-imge::before {
+        right: 0;
+    }
+}
 /* footer */
 footer {
     padding-bottom: 95px;
@@ -202,7 +217,7 @@ footer {
 }
 .footer input { 
     color: rgb(255, 0, 0);
-    background: rgb(255, 255, 255);
+    background: transparent;
     border: 3px solid rgb(255, 0, 0);
     width: 300px;                                               
     height: 55px; 
